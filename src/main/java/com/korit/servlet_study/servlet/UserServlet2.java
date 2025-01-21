@@ -58,7 +58,7 @@ public class UserServlet2 extends HttpServlet {
                     "history.back();" +
                     "</script>");
             return;
-        }
+        } 
         users.add(user);
 
         response.sendRedirect("http://localhost:8080/servlet_study_war/user");

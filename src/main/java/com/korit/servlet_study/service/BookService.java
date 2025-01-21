@@ -1,16 +1,30 @@
 package com.korit.servlet_study.service;
 
+import com.korit.servlet_study.dao.BookDao;
+import com.korit.servlet_study.entity.Book;
+
 public class BookService {
-    private static BookService bookservice;
+    private BookDao bookDao;
+    private static BookService bookService;
 
     private BookService() {
-
+        bookDao = BookDao.getInstance();
     }
 
     public static BookService getInstance() {
-        if (bookservice == null) {
-            bookservice = new BookService();
+        if (bookService == null) {
+            bookService = new BookService();
         }
-        return bookservice;
+        return bookService;
     }
+
+    public Book addBook(Book book) {
+        bookDao.saveAuthor(book.getAuthor());
+        bookDao.savePublisher(book.getPublisher());
+        bookDao.saveBookCategory(book.getBookCategory());
+
+        return bookDao.saveBook(book).get();
+    }
+
+
 }

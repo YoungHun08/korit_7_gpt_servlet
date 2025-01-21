@@ -1,6 +1,5 @@
 package com.korit.servlet_study.entity;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,5 +20,5 @@ public class Book {
 
     private Author author;
     private Publisher publisher;
-    private BookCategory category;
+    private BookCategory bookCategory;
 }

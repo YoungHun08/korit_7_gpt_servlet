@@ -40,6 +40,7 @@ public class UserServlet extends HttpServlet {
                 .name(request.getParameter("name"))
                 .email(request.getParameter("email"))
                 .build();
+        System.out.println(user);
 
         userService.addUser(user);
 

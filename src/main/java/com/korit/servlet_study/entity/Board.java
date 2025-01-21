@@ -5,24 +5,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-public class Author {
-    private int authorId;
-    private String authorName;
+@Builder
+public class Board {
+    private int boardId;
+    private String title;
+    private String content;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
