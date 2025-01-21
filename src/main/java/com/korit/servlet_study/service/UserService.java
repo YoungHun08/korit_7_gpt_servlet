@@ -32,6 +32,10 @@ public class UserService {
         Optional<User> userOptional = userDao.save(user);
         return userOptional.get();
     }
+<<<<<<< HEAD
 
 
 }
+=======
+}
+>>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9

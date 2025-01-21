@@ -23,7 +23,11 @@ public class UserDao {
         return userDao;
     }
 
+<<<<<<< HEAD
     public List<User> findAllBySearchValue(String SearchValue) {
+=======
+    public List<User> findAllBySearchValue(String searchValue) {
+>>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9
         List<User> users = new ArrayList<>();
         Connection con = null;
         PreparedStatement ps = null;
@@ -32,6 +36,7 @@ public class UserDao {
         try {
             con = DBConnectionMgr.getInstance().getConnection();
             String sql = """
+<<<<<<< HEAD
                     select
                         user_id,
                         username,
@@ -55,6 +60,17 @@ public class UserDao {
                         .email(rs.getString("email"))
                         .build());
             }
+=======
+                select
+                    user id,
+                    username,
+                    password,
+                    name,
+                    email
+                from
+                    user_tb
+                """;
+>>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -71,6 +87,7 @@ public class UserDao {
         try {
             con = DBConnectionMgr.getInstance().getConnection();
             String sql = """
+<<<<<<< HEAD
                 select
                     user_id,
                     username,
@@ -79,6 +96,16 @@ public class UserDao {
                     email
                 from
                     user_tb
+=======
+            select
+                user_id,
+                username,
+                password,
+                name,
+                email
+            from
+                user_tb
+>>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9
             """;
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
@@ -92,7 +119,10 @@ public class UserDao {
                         .email(rs.getString(5))
                         .build());
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -115,8 +145,12 @@ public class UserDao {
             ps.setString(2, user.getPassword());
             ps.setString(3, user.getName());
             ps.setString(4, user.getEmail());
+<<<<<<< HEAD
             int successCount = ps.executeUpdate(); //insert, update, delete
             System.out.println(successCount);
+=======
+            ps.executeUpdate(); //insert, update, delete
+>>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9
             ResultSet keyRs = ps.getGeneratedKeys();
             keyRs.next();
             int userId = keyRs.getInt(1);
@@ -130,6 +164,7 @@ public class UserDao {
 
         return Optional.ofNullable(user);
     }
+<<<<<<< HEAD
 }
 
 
@@ -140,3 +175,6 @@ public class UserDao {
 
 
 
+=======
+}
+>>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9

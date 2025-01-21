@@ -40,10 +40,17 @@ public class DBConnectionMgr {
 
     private Vector connections = new Vector(10);
     private String _driver = "com.mysql.cj.jdbc.Driver",
+<<<<<<< HEAD
     _url = "jdbc:mysql://localhost:3306/study",
     _user = "root",
     _password = "1q2w3e4r!";
     
+=======
+            _url = "jdbc:mysql://localhost:3306/study",
+            _user = "root",
+            _password = "1q2w3e4r!";
+
+>>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9
     private boolean _traceOn = false;
     private boolean initialized = false;
     private int _openConnections = 50;
@@ -323,4 +330,8 @@ class ConnectionObject {
         connection = c;
         inUse = useFlag;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9

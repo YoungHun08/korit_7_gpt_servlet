@@ -28,13 +28,20 @@ public class BookDao {
     }
 
     public Optional<Author> saveAuthor(Author author) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9
         Connection con = null;
         PreparedStatement ps = null;
         try {
             con = mgr.getConnection();
             String sql = """
+<<<<<<< HEAD
                     insert into author_tb values (default, ?)
+=======
+                    insert into author values (default, ?)
+>>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9
                     """;
             ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, author.getAuthorName());
@@ -49,6 +56,7 @@ public class BookDao {
         }
         return Optional.ofNullable(author);
     }
+<<<<<<< HEAD
 
     public Optional<Publisher> savePublisher(Publisher publisher) {
         Connection con = null;
@@ -118,4 +126,18 @@ public class BookDao {
     }
 
 
+=======
+    public Optional<Publisher> savePublisher(Publisher publisher) {
+
+        return Optional.ofNullable(publisher);
+    }
+    public Optional<BookCategory> saveBookCategory(BookCategory bookCategory) {
+
+        return Optional.ofNullable(bookCategory);
+    }
+    public Optional<Book> saveBook(Book book) {
+
+        return Optional.ofNullable(book);
+    }
+>>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9
 }
