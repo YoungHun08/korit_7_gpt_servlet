@@ -1,16 +1,14 @@
 package com.korit.servlet_study.dto;
 
-
-import com.korit.servlet_study.server_flow.Response;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class ResponseDto<T> {
     private int status;
     private String message;
@@ -24,3 +22,13 @@ public class ResponseDto<T> {
         return new ResponseDto<>(400, "fail", data);
     }
 }
+
+
+
+
+
+
+
+
+
+
