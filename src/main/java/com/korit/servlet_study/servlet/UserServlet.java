@@ -40,17 +40,10 @@ public class UserServlet extends HttpServlet {
                 .name(request.getParameter("name"))
                 .email(request.getParameter("email"))
                 .build();
-<<<<<<< HEAD
         System.out.println(user);
-=======
->>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9
 
         userService.addUser(user);
 
         response.sendRedirect("http://localhost:8080/servlet_study_war/user");
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9

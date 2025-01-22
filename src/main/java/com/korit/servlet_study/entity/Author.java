@@ -13,7 +13,6 @@ public class Author {
     private int authorId;
     private String authorName;
 }
-<<<<<<< HEAD
 
 
 
@@ -27,5 +26,3 @@ public class Author {
 
 
 
-=======
->>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9

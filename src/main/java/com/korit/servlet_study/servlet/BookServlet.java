@@ -1,14 +1,11 @@
 package com.korit.servlet_study.servlet;
 
-<<<<<<< HEAD
 import com.korit.servlet_study.entity.Author;
 import com.korit.servlet_study.entity.Book;
 import com.korit.servlet_study.entity.BookCategory;
 import com.korit.servlet_study.entity.Publisher;
 import com.korit.servlet_study.service.BookService;
 
-=======
->>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,7 +15,6 @@ import java.io.IOException;
 
 @WebServlet("/book1")
 public class BookServlet extends HttpServlet {
-<<<<<<< HEAD
     private BookService bookService;
 
     public BookServlet() {
@@ -28,12 +24,6 @@ public class BookServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("/WEB-INF/book_study1.jsp").forward(req, resp);
-=======
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/book_sutdy1.jsp").forward(req, resp);
->>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9
     }
 
     @Override
@@ -44,7 +34,6 @@ public class BookServlet extends HttpServlet {
         String publisher = req.getParameter("publisher");
         String category = req.getParameter("category");
         String imgUrl = req.getParameter("imgUrl");
-<<<<<<< HEAD
 
         Author authorObj = new Author(0, author);
         Publisher publisherObj = new Publisher(0, publisher);
@@ -59,7 +48,5 @@ public class BookServlet extends HttpServlet {
                 .build();
 
         bookService.addBook(book);
-=======
->>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9
     }
 }

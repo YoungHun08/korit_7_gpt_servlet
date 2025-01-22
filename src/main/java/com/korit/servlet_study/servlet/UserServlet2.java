@@ -58,17 +58,9 @@ public class UserServlet2 extends HttpServlet {
                     "history.back();" +
                     "</script>");
             return;
-<<<<<<< HEAD
         } 
-=======
-        }
->>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9
         users.add(user);
 
         response.sendRedirect("http://localhost:8080/servlet_study_war/user");
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9

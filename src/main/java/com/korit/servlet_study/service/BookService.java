@@ -1,6 +1,5 @@
 package com.korit.servlet_study.service;
 
-<<<<<<< HEAD
 import com.korit.servlet_study.dao.BookDao;
 import com.korit.servlet_study.entity.Book;
 
@@ -28,19 +27,4 @@ public class BookService {
     }
 
 
-=======
-public class BookService {
-    private static BookService bookservice;
-
-    private BookService() {
-
-    }
-
-    public static BookService getInstance() {
-        if (bookservice == null) {
-            bookservice = new BookService();
-        }
-        return bookservice;
-    }
->>>>>>> 71d2df522bfa1462034a33ebac4bddb92618d6d9
 }
